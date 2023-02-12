@@ -8,6 +8,7 @@ def tabs():
     -Remove
     -Change name
     -Menu func
+    -Give a standard option for each month [{year}month, 2023 januari (as example)] and add all months in 1 go
 
     Tabs tab = new Tab() 
     tab.add()
@@ -25,6 +26,12 @@ def titles():
     """
     pass
 
+def api():
+    """
+    -Add API possibility
+    -Automatically fill in fields and calculate if its a W/L 
+    """
+
 def exit():
     system('cls')
     print("Goodbye :wave:")
@@ -35,7 +42,7 @@ def display_menu(menu):
         print(key, function.__name__.capitalize())
 
 def run():
-    function_names = [tabs, titles, exit]
+    function_names = [tabs, titles, api, exit]
     menu_items = dict(enumerate(function_names, start=1))
 
     while True:
