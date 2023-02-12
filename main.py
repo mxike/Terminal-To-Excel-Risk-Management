@@ -7,6 +7,21 @@ def tabs():
     -Add
     -Remove
     -Change name
+    -Menu func
+
+    Tabs tab = new Tab() 
+    tab.add()
+    """
+    pass
+
+def titles():
+    """
+    -Add single title
+    -Add multiple titles
+    -Insert standard title set
+    -Change title
+    -Delete title
+    -Clear all titles
     """
     pass
 
@@ -20,7 +35,7 @@ def display_menu(menu):
         print(key, function.__name__.capitalize())
 
 def run():
-    function_names = [tabs, exit]
+    function_names = [tabs, titles, exit]
     menu_items = dict(enumerate(function_names, start=1))
 
     while True:
@@ -31,3 +46,4 @@ def run():
 
 if __name__ == "__main__":
     run()
+    
