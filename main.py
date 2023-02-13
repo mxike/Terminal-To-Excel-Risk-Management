@@ -34,6 +34,13 @@ def api():
     """
     pass
 
+def settings():
+    """
+    - Color themes
+    - Font
+    """
+    pass
+
 def exit():
     system('cls')
     print("Goodbye :wave:")
@@ -63,8 +70,8 @@ def create_menu(list):
 
 def main_menu():
     system('cls')
-    main_menu_list = [tabs, titles, api, exit]
-    menu_title("Main Menu", "bright_blue")
+    main_menu_list = [tabs, titles, api, settings, exit]
+    menu_title("Main Menu", "green")
     create_menu(main_menu_list)
 
 def run():
@@ -73,4 +80,3 @@ def run():
 
 if __name__ == "__main__":
     run()
-    

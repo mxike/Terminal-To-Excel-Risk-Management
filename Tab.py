@@ -1,7 +1,15 @@
+from os import system
+import openpyxl
+
 class Tab:
+  def showTabs(self):
+    pass
+
   def addTab(self):
+    system('cls')
     print("add Tab")
-  
+    self.menu()
+
   def changeTab(self):
     pass
 
@@ -15,7 +23,7 @@ class Tab:
   def menu(self):
     from main import create_menu, menu_title
     menu_title("Tab Menu", "bright_blue")
-    tab_menu = [self.addTab, self.changeTab, self.removeTab, self.back]
+    tab_menu = [self.showTabs, self.addTab, self.changeTab, self.removeTab, self.back]
 
     create_menu(tab_menu)
     
