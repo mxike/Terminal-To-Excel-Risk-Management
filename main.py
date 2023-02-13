@@ -8,16 +8,13 @@ def tabs():
     -Add
     -Remove
     -Change name
-    -Menu func
     -Give a standard option for each month [{year}month, 2023 januari (as example)] and add all months in 1 go
 
     Tabs tab = new Tab() 
     tab.add()
     """
-
     system('cls')
-    t1 = Tab()
-    t1.menu()
+    t1 = Tab().menu()
 
 def titles():
     """
@@ -42,6 +39,16 @@ def exit():
     print("Goodbye :wave:")
     sys.exit()
 
+def menu_color_title():
+    # https://rich.readthedocs.io/en/stable/appendix/colors.html
+    colors = []
+    pass
+
+def menu_title(name: str, color: str):
+    # selected_color = menu_color_title
+    # color = selected_color
+    print("["+color+"]"+name+"[/"+color+"]")
+
 def display_menu(menu):
     for key, function in menu.items():
         print(key, function.__name__.capitalize())
@@ -57,6 +64,7 @@ def create_menu(list):
 def main_menu():
     system('cls')
     main_menu_list = [tabs, titles, api, exit]
+    menu_title("Main Menu", "bright_blue")
     create_menu(main_menu_list)
 
 def run():
