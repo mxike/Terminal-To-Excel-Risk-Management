@@ -3,7 +3,7 @@ from rich import print
 from os import system
 from Tab import Tab
 
-def tabs():
+def sheets():
     """
     -Add
     -Remove
@@ -70,8 +70,8 @@ def create_menu(list):
 
 def main_menu():
     system('cls')
-    main_menu_list = [tabs, titles, api, settings, exit]
-    menu_title("Main Menu", "green")
+    main_menu_list = [sheets, titles, api, settings, exit]
+    menu_title("Main Menu", "bright_blue")
     create_menu(main_menu_list)
 
 def run():
